@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application' %>
+  </head>
+  <body>
+    <header>
+      <h1>Todo Application</h1>
+      <p class="greeting"><%= time_based_greeting %></p>
+      <p>Visit count: <%= @visit_count %></p>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p>Last visited: <%= time_ago_in_words(session[:last_visited]) %> ago</p>
+    </footer>
+  </body>
+</html>
