@@ -9,7 +9,10 @@
     <header>
       <h1>Todo Application</h1>
       <p class="greeting"><%= time_based_greeting %></p>
-      <p>Visit count: <%= @visit_count %></p>
+      <div class="visit-stats">
+        <p>Total visits: <%= session[:visit_count] %></p>
+        <p>This page visits: <%= @visit_count %></p>
+      </div>
     </header>
 
     <main>
